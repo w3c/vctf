@@ -297,13 +297,15 @@ blockquote {
 ul li {
   list-style-position: inside;
   list-style: disc;
-  padding-left: 20px;
+  padding-left: 3px;
+  margin-left: 2em;
 }
 
 ol li {
   list-style-position: inside;
   list-style: decimal;
   padding-left: 3px;
+  margin-left: 2em;
 }
 
 dl dt {

@@ -24,74 +24,219 @@
 
         <hr>
 
-        <section id="main_content">
-          <h3 id="welcome">Welcome to the Verifiable Claims Task Force</h3>
-<p>
-The goal of this task force is to determine if a W3C Working Group should be 
-created to standardize technology around a verifiable claims ecosystem 
-(aka: credentials, attestations). 
-</p>
+        <section id="welcome">
+          <h3>Welcome to the Verifiable Claims Task Force</h3>
+          <p>
+The goal of this task force is to determine if a W3C Working Group should be
+created to standardize technology around a
+<a href="#verifiable-claim">verifiable claims</a> ecosystem
+(aka: credentials, attestations).
+          </p>
 
-<p>
-The Task Force is actively engaging a diverse set of 
-participants<sup>1</sup> in a neutral group to discuss use cases 
-(such as enrollment) and the problem area in general. The group is documenting 
-and analyzing concerns raised in various fora around the value-add that W3C 
+          <p>
+The Task Force is actively engaging a diverse set of
+participants<sup>1</sup> in a neutral group to discuss use cases
+(such as enrollment) and the problem area in general. The group is documenting
+and analyzing concerns raised in various fora around the value-add that W3C
 could provide around verifiable claims that are user-centric.
-</p>
+          </p>
 
-<p>
-<sup id="super-1">1</sup> <em>Participants are expected to be invited from organizations like W3C, IETF, IMS Global, claims issuers, identity providers, claims consumers, the Credentials CG, the general public, and a variety of other organizations and individuals that have shown interest in the space.</em>
-</p>
+          <p>
+<sup id="super-1">1</sup> <em>Participants are expected to be invited from
+organizations like W3C, IETF, IMS Global, claims issuers, identity
+providers, claims consumers, the Credentials CG, the general public, and a
+variety of other organizations and individuals that have shown interest in
+the space.</em>
+          </p>
+        </section>
 
+        <section id="problem">
+          <h3>Problem Statement</h3>
+          <p>
+There is currently no widely used <a href="#user-centric">user-centric</a>
+standard for <strong>expressing and transacting verifiable claims</strong>
+(aka: credentials, attestations) via the Web. Data has been gathered
+demonstrating a
+<a href="http://opencreds.org/presentations/2015/w3c-tpac/anonymized.html">
+desire to create such an interoperable ecosystem</a>
+around the expression and transmission of verifiable claims.
+          </p>
+          <p>
+These problems exist today:
+          </p>
+          <ul>
+            <li>
+In existing service-centric architectures, identity services inject themselves
+into every relationship in the ecosystem. This means users can't easily change
+their service provider without losing their digital identity. This leads to
+vendor lock-in, identity fragility, reduced competition in the marketplace,
+and reduced privacy for all stakeholders.
+            </li>
+            <li>
+There is no interoperable standard capable of expressing and transmitting rich
+verifiable claims that cuts across industries (e.g., finance, retail,
+education, and healthcare). This leads to industry-specific solutions that
+are costly, inefficient, proprietary, and inhibit users' ability to manage
+their digital identities in a cohesive way.
+            </li>
+            <li>
+There is no standard that makes it easy for users to assert their
+qualifications to a service provider (e.g. I am a citizen of the USA, I am a
+board-certified doctor, etc.).
+            </li>
+          </ul>
+        </section>
+
+        <section>
           <h3 id="telecons">Weekly Telecons</h3>
-    <p>
-The group meets regularly on Tuesdays at 11am ET. A typical meeting will have 
-an agenda that is posted to the 
-<a href="https://lists.w3.org/Archives/Public/public-webpayments-ig/latest">mailing list</a> 
-at least 24 hours prior to the call. There are no costs associated with joining 
-the group or limitations on who may join the teleconference as long as they 
+          <p>
+The group meets regularly on Tuesdays at 11am ET. A typical meeting will have
+an agenda that is posted to the
+<a href="https://lists.w3.org/Archives/Public/public-webpayments-ig/latest">mailing list</a>
+at least 24 hours prior to the call. There are no costs associated with joining
+the group or limitations on who may join the teleconference as long as they
 agree to contribute productively to the discussion.
-    <p>
-<strong><span class="icon icon-calendar"></span> Next Meeting</strong>: 
+          </p>
+          <p>
+<strong><span class="icon icon-calendar"></span> Next Meeting</strong>:
 <span id="meetingDate"></span><br>
-<strong><span class="icon icon-clock"></span> Time</strong>: 
+<strong><span class="icon icon-clock"></span> Time</strong>:
 1600 UTC / 8am San Francisco / 11am Boston / 4pm London<br>
 
-<strong><span class="icon icon-mobile"></span> SIP</strong>: 
+<strong><span class="icon icon-mobile"></span> SIP</strong>:
 <a href="sip:vctf@96.89.14.196">sip:vctf@96.89.14.196</a> (Windows / Mac OSX: use <a href="http://icanblink.com/">Blink</a>, Linux: use <a href="http://www.linphone.org/">Linphone</a>)<br>
 
-<strong><span class="icon icon-phone-3"></span> Phone</strong>: 
+<strong><span class="icon icon-phone-3"></span> Phone</strong>:
 <a href="tel:+15409614469;postd=p6306">+1.540.961.4469 x6306</a><br>
 
-<strong><span class="icon icon-bubble"></span> IRC</strong>: 
+<strong><span class="icon icon-bubble"></span> IRC</strong>:
 <a href="irc://irc.w3.org:6665/#vctf">irc://irc.w3.org:6665/#vctf</a> (connect via <a href="http://irc.w3.org/?channels=vctf">Web IRC</a>)<br>
 
-<strong><span class="icon icon-alarm"></span> Duration</strong>: 
+<strong><span class="icon icon-alarm"></span> Duration</strong>:
 60 minutes
-      </p>
-      <p>
-Make sure you have a good headset with a microphone as any background noise 
-is distracting to others during the call. If there is excessive noise on your 
-connection, you will be muted until you need to speak. If you cannot get SIP 
-to work for you, there is an emergency dial-in number. If you use this number 
-regularly, you will be expected to reimburse the group for call charges. 
-SIP is free for both the caller and the callee - use it. Emergency dial-in 
+          </p>
+          <p>
+Make sure you have a good headset with a microphone as any background noise
+is distracting to others during the call. If there is excessive noise on your
+connection, you will be muted until you need to speak. If you cannot get SIP
+to work for you, there is an emergency dial-in number. If you use this number
+regularly, you will be expected to reimburse the group for call charges.
+SIP is free for both the caller and the callee - use it. Emergency dial-in
 number: <a href="tel:+15409614469;postd=p6306">+1.540.961.4469 x6306</a>
-      </p>
+          </p>
+        </section>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/w3c/vctf-minutes" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        <section id="definitions">
+          <h3>Definitions</h3>
+          <dl>
+            <dt><strong id="verifiable-claim">verifiable claim</strong></dt>
+            <dd>
+a cryptographically non-repudiable set of statements made by an entity about
+another entity.
+            </dd>
+            <dt><strong id="user-centric">user-centric</strong></dt>
+            <dd>
+a system that places people and organizations in the center of an ecosystem.
+To understand more about this design choice, read about its
+<a href="#design-approaches">ramifications</a>.
+            </dd>
+            <dt><strong id="service-centric">service-centric</strong></dt>
+            <dd>
+a system that places services in the center of an ecosystem. To understand
+more about this design choice, read about its
+<a href="#design-approaches">ramifications</a>.
+            </dd>
+          </dl>
+        </section>
+
+        <section id="design-approaches">
+          <h3>Ramifications of User-Centric vs. Service-Centric Ecosystems</h3>
+
+          <p>
+A verifiable claims ecosystem that is <a href="#user-centric">user-centric</a>
+has the following qualities:
+          </p>
+
+          <ul>
+            <li>
+Users are positioned in the middle between issuers and consumers.
+            </li>
+            <li>
+Users receive and store verifiable claims from issuers through an agent that
+the issuer does not need to trust.
+            </li>
+            <li>
+Users provide verifiable claims to consumers through an agent that consumers
+needn't trust; they only need to trust issuers.
+            </li>
+            <li>
+Verifiable claims are associated with users, not particular services; users
+can decide how to aggregate claims and manage their own digital identities.
+            </li>
+            <li>
+Users can control and own their own identifiers.
+            </li>
+            <li>
+Users can control which verifiable claims to use and when.
+            </li>
+            <li>
+Users may freely choose and swap out the agents they employ to help them
+manage and share their verifiable claims.
+            </li>
+            <li>
+Does not require users that share verifiable claims to reveal the identity of
+the consumer to their agent or to issuers.
+            </li>
+          </ul>
+
+          <p>
+A verifiable claims ecosystem that is
+<a href="#service-centric">service-centric</a> has the following qualities:
+          </p>
+
+          <ul>
+            <li>
+Services are positioned in the middle between issuers, users, and consumers.
+            </li>
+            <li>
+Users receive and store verifiable claims from issuers through an agent that
+the issuer must trust, or they must be the same entity.
+            </li>
+            <li>
+Users provide verifiable claims to consumers through an agent that consumers
+must trust.
+            </li>
+            <li>
+Verifiable claims must be associated with services, fracturing a user's
+digital identity potentially against their desire.
+            </li>
+            <li>
+Services control and own their user's identifiers.
+            </li>
+            <li>
+User's verifiable claims are locked in agent silos.
+            </li>
+            <li>
+Requires users that share verifiable claims to reveal the identity of the
+consumer to their agent and issuers.
+            </li>
+            <li>
+Consumers may have to register with user's agents to consume verifiable claims.
+            </li>
+          </ul>
+        </section>
+
+        <section id="github" class="clearfix">
+<a href="https://github.com/w3c/vctf-minutes" id="view-on-github" class="button"><span>View on GitHub</span></a>
         </section>
 
         </section>
 
         <footer>
-          vctf-minutes is maintained by <a href="https://github.com/w3c">w3c</a><br>
-          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
         </footer>
 
-        
+
       </div>
     </div>
     <script>
