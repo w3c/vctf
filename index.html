@@ -323,8 +323,12 @@ Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
     </div>
     <script>
 function nextTuesday() {
+  var skipUntil = new Date('2016-01-12 11:00:00 EST');
   var date = new Date();
   date.setDate(date.getDate() + (9 - date.getDay()) % 7);
+  if(date < skipUntil) {
+    date = skipUntil;
+  }
   return date.toISOString().slice(0, 10);
 }
 console.log(nextTuesday());
