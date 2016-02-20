@@ -13,6 +13,9 @@
     <ul id="navbar" style="font-size:
 			     small">
         <li>
+            <a href="#problem">Problem Statement</a>
+        </li>
+        <li>
             <a href="#goals">Goals</a>
         </li>
         <li>
@@ -95,44 +98,59 @@
         <p class="join"><a href="">Join the Verifiable Claims Working Group</a>.</p>
     </div>
 
-    <h2 id="goals">Phase I: Goals</h2>
+    <h2 id="problem">Problem Statement</h2>
 
-   <p>Expressing rich verifiable claims (aka credentials),
-   such as professional licenses,
-   levels of education, government issued documents, and payment credentials,
-   is still difficult to do on the Web in an interoperable way. This is partly
-   due to a lack of standards in areas such as:</p>
+   <p>
+There is currently no widely used user-centric and privacy-enhancing standard
+for expressing and transacting verifiable claims (aka: credentials,
+attestations) via the Web.
+   </p>
+   <p>
+These problems exist today:
+   </p>
+   <ul>
+       <li>
+There is no standard that makes it easy for users to assert their verifiable
+qualifications to a service provider (e.g. my loyalty card number is X, I
+have an account at Bank Y, I am over the age of 21, I am a citizen of the USA,
+I am a Chartered Financial Analyst, etc.).
+       </li>
+       <li>
+In existing attribute exchange architectures (like SAML, OpenID Connect, Login
+with SuperProviderX, etc.), users do not independently exist from service
+providers. This means users can't easily change their service provider without
+losing their digital identity. This leads to vendor lock-in, identity
+fragility, reduced competition in the marketplace, and reduced privacy for
+all stakeholders.
+       </li>
+       <li>
+There is no interoperable standard capable of expressing and transmitting
+rich verifiable claims that cuts across industries (e.g., finance, retail,
+education, and healthcare). This leads to industry-specific solutions that
+are costly, inefficient, proprietary, and inhibit users' ability to manage
+their digital identities in a cohesive way.
+       </li>
+   </ul>
 
-	<ul>
-	  <li>the high level flow of a issuing, storing, and consuming a verifiable claim via the Web;</li>
-	    <li>the programming interfaces between the
-            various parties (such as between the user agent, and credential issuers, curators, and consumers);</li>
-	    <li>the messages exchanged between these
-            parties over the Web.</li>
-	</ul>
+    <h2 id="goals">Goals</h2>
 
-    <p>If successful, the Recommendations from this Working Group will
-increase some areas of interoperability between credential holders and
-credential issuing, curation, and consuming systems, producing benefits such as:</p>
+   <p>
+Research into this problem was performed by the
+<a href="https://www.w3.org/Payments/IG/">Web Payments Interest Group</a>
+via the
+<a href="http://w3c.github.io/vctf/">Verifiable Claims Task Force</a>.
+The research findings can be found in the
+<a href="https://docs.google.com/document/d/1dYup3KC2nak3LVTzyapr996TKxDj1w5Eyp4g13rQQBA/edit">Verifiable Claims Task Force Final Report</a>.
+The findings suggest that there is consensus to address a
+@@@narrow set of use cases@@@ around the data model and syntax(es) for
+expressing verifiable claims as well as an analysis of how the data model
+and syntax(es) could be combined with existing technology to address the
+problems listed above.
+   </p>
 
-        <ul>
-        <li>A better authentication and authorization experience for users. The standards should facilitate automation, one approach to improving the user experience.</li>
-        <li>Easier deployment of new types of credentials (e.g., related to professional development or high-stakes access).</li>
-        <li>Added value through machine-readable credential requests and credential responses.</li>
-    </ul>
-
-    <p>For more background information about this group, please see @@@</p>
-
-    <p>Under this charter, the Working Group defines Recommendations that allow for the expression of a set of rich verifiable claims, such as a professional license, government-issued document, or payment credential, that can be associated with a particular entity.</p>
-
-    <h3 id="phase-2">Phase II: Goals</h3>
-
-    <p>Phase II goals include the definition of a protocol for issuing, storing, and requesting credentials. It is expected that the Working Group will be re-chartered to address Phase II, or will be shut down if Phase I is unsuccessful.</p>
-
-    <h3 id="phase-3">Phase III: Goals</h3>
-
-    <p>Phase III goals include ...</p>
-
+   <p>
+For more background information about this group, please see @@@the FAQ@@@.
+   </p>
 
     <div class="scope">
         <h2 id="scope">Scope</h2>
@@ -140,7 +158,21 @@ credential issuing, curation, and consuming systems, producing benefits such as:
 	<p>The Working Group will Recommend:</p>
 
   <ol>
-    <li>a data model and data format for the expression of rich verifiable claims</li>
+    <li>
+a data model and syntax(es) for the expression of rich verifiable claims
+    </li>
+    <li>
+a note specifying how these data models should be used with existing
+attribute exchange protocols, a recommendation that existing protocols
+should be modified, or a recommendation that a new protocol is required to
+address the problems stated earlier in this document.
+    </li>
+  </ol>
+
+	<p>The Working Group will not:</p>
+
+  <ol>
+    <li>Define a new protocol for attribute exchange.</li>
   </ol>
 
 	<h3 id="definitions">Definitions</h3>
@@ -176,18 +208,33 @@ credential issuing, curation, and consuming systems, producing benefits such as:
     <div>
       <h2 id="deliverables">Deliverables</h2>
 
-        <h3 id="Web_Payments_Terms">Verifiable Claims Data Model and Format Recommendation</h3>
+        <h3 id="vc-data-model">Verifiable Claims Data Model and Syntax Recommendation</h3>
 
         <p>This Recommendation will define or identify a:</p>
         <ul>
             <li>
-                <strong>Data Model</strong>: for expressing rich verifiable claims in an extensible way.</a>.
+                <strong>Data Model</strong>: for expressing rich verifiable claims in a semantically extensible way.</a>
             </li>
             <li>
-                <strong>Data Format(s)</strong>: that are machine-readable and capable of expressing the data model across a variety of formats.
+                <strong>Syntax(es)</strong>: that are machine-readable and capable of expressing the data model across a variety of formats.
             </li>
             <li>
                 <strong>Signature Mechanism(s)</strong>: that are capable of protecting the verifiable claims from attack such that the claims can be trusted by consumers of those claims.
+            </li>
+        </ul>
+
+        <h3 id="vc-implementation-guidance">Verifiable Claims Implementation Guidance</h3>
+
+        <p>This NOTE will define or identify:</p>
+        <ul>
+            <li>
+How the data model and syntax can be used with existing attribute exchange architectures to address all of the problems stated in this document, or
+            </li>
+            <li>
+How the data model and syntax can be used with a set of modifications to existing attribute exchange architectures, or
+            </li>
+            <li>
+If a new attribute exchange protocol is needed and if so, requirements for that protocol to address the problems identified in this document.
             </li>
         </ul>
 
@@ -236,11 +283,16 @@ as <a href="http://www.w3.org/Submission/">W3C Member
                 </th>
             </tr>
             <tr>
-                <th rowspan="1" colspan="1">Verifiable Claims Messages</th>
+                <th rowspan="1" colspan="1">Verifiable Claims Data Model and Syntax(es)</th>
                 <td class="WD1" rowspan="1" colspan="1">October 2016</td>
                 <td class="CR" rowspan="1" colspan="1">March 2016</td>
                 <td class="PR" rowspan="1" colspan="1">June 2017</td>
                 <td class="REC" rowspan="1" colspan="1">November 2017</td>
+            </tr>
+            <tr>
+                <th rowspan="1" colspan="1">Verifiable Claims Implementation Guidance</th>
+                <td class="WD1" rowspan="1" colspan="3">March 2016</td>
+                <td class="REC" rowspan="1" colspan="3">(NOTE) November 2017</td>
             </tr>
             </tbody>
         </table>
